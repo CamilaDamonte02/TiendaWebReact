@@ -1,0 +1,258 @@
+/* line 9, ../../../../Aplicaciones/Documents/PERSONAL/REACT UDEMY/VEGAN_SHOP/SASS/stylePrueba.scss */
+.shopping {
+  background-color: #cbddce;
+}
+
+/* line 13, ../../../../Aplicaciones/Documents/PERSONAL/REACT UDEMY/VEGAN_SHOP/SASS/stylePrueba.scss */
+.shopping-container {
+  display: grid;
+  gap: 2vw;
+  grid-template-columns: 3fr 1fr;
+  margin: 2vw;
+}
+
+/* line 20, ../../../../Aplicaciones/Documents/PERSONAL/REACT UDEMY/VEGAN_SHOP/SASS/stylePrueba.scss */
+.shopping-container .cart, .shopping-container .products {
+  background-color: white;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5vw 3vw;
+}
+
+/* line 30, ../../../../Aplicaciones/Documents/PERSONAL/REACT UDEMY/VEGAN_SHOP/SASS/stylePrueba.scss */
+.shopping-container .products .products-title {
+  text-align: center;
+}
+
+/* line 32, ../../../../Aplicaciones/Documents/PERSONAL/REACT UDEMY/VEGAN_SHOP/SASS/stylePrueba.scss */
+.shopping-container .products .products-title h1 {
+  font-family: "League Spartan", sans-serif;
+  padding: 0;
+  margin: 0;
+  font-size: 4vw;
+}
+
+/* line 38, ../../../../Aplicaciones/Documents/PERSONAL/REACT UDEMY/VEGAN_SHOP/SASS/stylePrueba.scss */
+.shopping-container .products .products-title h3 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-size: small;
+  padding: 0;
+  margin: 0;
+  font-size: 1.5vw;
+}
+
+/* line 47, ../../../../Aplicaciones/Documents/PERSONAL/REACT UDEMY/VEGAN_SHOP/SASS/stylePrueba.scss */
+.shopping-container .products .products-category-all {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 2vw 0;
+}
+
+/* line 53, ../../../../Aplicaciones/Documents/PERSONAL/REACT UDEMY/VEGAN_SHOP/SASS/stylePrueba.scss */
+.shopping-container .products .products-category-all .products-category {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+}
+
+/* line 58, ../../../../Aplicaciones/Documents/PERSONAL/REACT UDEMY/VEGAN_SHOP/SASS/stylePrueba.scss */
+.shopping-container .products .products-category-all .products-category .products-category_icon {
+  padding: 1vw;
+  background-color: #ffd4a9;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* line 65, ../../../../Aplicaciones/Documents/PERSONAL/REACT UDEMY/VEGAN_SHOP/SASS/stylePrueba.scss */
+.shopping-container .products .products-category-all .products-category .products-category_icon img {
+  width: 3vw;
+  height: auto;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* line 75, ../../../../Aplicaciones/Documents/PERSONAL/REACT UDEMY/VEGAN_SHOP/SASS/stylePrueba.scss */
+.shopping-container .products .products-items-all {
+  display: grid;
+  grid-template-columns: repeat(1fr, 3);
+  margin-bottom: 2vw;
+}
+
+/* line 79, ../../../../Aplicaciones/Documents/PERSONAL/REACT UDEMY/VEGAN_SHOP/SASS/stylePrueba.scss */
+.shopping-container .products .products-items-all .product-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5vw;
+  border: 1px solid #d8d6d6;
+  border-radius: 25px;
+  padding: 0.5vw;
+}
+
+/* line 87, ../../../../Aplicaciones/Documents/PERSONAL/REACT UDEMY/VEGAN_SHOP/SASS/stylePrueba.scss */
+.shopping-container .products .products-items-all .product-item img {
+  border-radius: 25px;
+  width: 15vw;
+  height: 10vw;
+  object-fit: cover;
+}
+
+/* line 93, ../../../../Aplicaciones/Documents/PERSONAL/REACT UDEMY/VEGAN_SHOP/SASS/stylePrueba.scss */
+.shopping-container .products .products-items-all .product-item img, .shopping-container .products .products-items-all .product-item p {
+  padding: 0;
+  margin: 0;
+}
+
+/* line 97, ../../../../Aplicaciones/Documents/PERSONAL/REACT UDEMY/VEGAN_SHOP/SASS/stylePrueba.scss */
+.shopping-container .products .products-items-all .product-item p {
+  font-family: "Poppins", sans-serif;
+}
+
+/* line 100, ../../../../Aplicaciones/Documents/PERSONAL/REACT UDEMY/VEGAN_SHOP/SASS/stylePrueba.scss */
+.shopping-container .products .products-items-all .product-item .product-name {
+  text-transform: uppercase;
+  background-color: #cbddce;
+  width: 80%;
+  text-align: center;
+}
+
+/* line 106, ../../../../Aplicaciones/Documents/PERSONAL/REACT UDEMY/VEGAN_SHOP/SASS/stylePrueba.scss */
+.shopping-container .products .products-items-all .product-item .products-button-add {
+  background-color: #cbddce;
+  border: none;
+  padding: 0.5vw 1vw;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  border-radius: 25px;
+}
+
+/* line 117, ../../../../Aplicaciones/Documents/PERSONAL/REACT UDEMY/VEGAN_SHOP/SASS/stylePrueba.scss */
+.shopping-container .products .products-button {
+  background-color: #cbddce;
+  border: none;
+  padding: 0.5vw 1vw;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  border-radius: 25px;
+  width: 80%;
+  font-size: large;
+}
+
+/* line 130, ../../../../Aplicaciones/Documents/PERSONAL/REACT UDEMY/VEGAN_SHOP/SASS/stylePrueba.scss */
+.shopping-container .cart .cart-titles {
+  text-align: center;
+}
+
+/* line 132, ../../../../Aplicaciones/Documents/PERSONAL/REACT UDEMY/VEGAN_SHOP/SASS/stylePrueba.scss */
+.shopping-container .cart .cart-titles h2 {
+  font-family: "League Spartan", sans-serif;
+  padding: 0;
+  margin: 0;
+  font-size: 2vw;
+}
+
+/* line 138, ../../../../Aplicaciones/Documents/PERSONAL/REACT UDEMY/VEGAN_SHOP/SASS/stylePrueba.scss */
+.shopping-container .cart .cart-titles h3 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-size: small;
+  padding: 0;
+  margin: 0;
+  font-size: 1vw;
+}
+
+/* line 147, ../../../../Aplicaciones/Documents/PERSONAL/REACT UDEMY/VEGAN_SHOP/SASS/stylePrueba.scss */
+.shopping-container .cart .cart-all-items {
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
+  margin: 1vw;
+}
+
+/* line 152, ../../../../Aplicaciones/Documents/PERSONAL/REACT UDEMY/VEGAN_SHOP/SASS/stylePrueba.scss */
+.shopping-container .cart .cart-all-items .cart-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1vw;
+}
+
+/* line 158, ../../../../Aplicaciones/Documents/PERSONAL/REACT UDEMY/VEGAN_SHOP/SASS/stylePrueba.scss */
+.shopping-container .cart .cart-all-items .cart-item .cart-item_info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1vw;
+}
+
+/* line 164, ../../../../Aplicaciones/Documents/PERSONAL/REACT UDEMY/VEGAN_SHOP/SASS/stylePrueba.scss */
+.shopping-container .cart .cart-all-items .cart-item .cart-item_info img {
+  width: 4vw;
+}
+
+/* line 167, ../../../../Aplicaciones/Documents/PERSONAL/REACT UDEMY/VEGAN_SHOP/SASS/stylePrueba.scss */
+.shopping-container .cart .cart-all-items .cart-item .cart-item_info p {
+  font-family: "Poppins", sans-serif;
+  font-size: small;
+  text-align: left;
+}
+
+/* line 173, ../../../../Aplicaciones/Documents/PERSONAL/REACT UDEMY/VEGAN_SHOP/SASS/stylePrueba.scss */
+.shopping-container .cart .cart-all-items .cart-item .cart-item_count {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5vw;
+}
+
+/* line 179, ../../../../Aplicaciones/Documents/PERSONAL/REACT UDEMY/VEGAN_SHOP/SASS/stylePrueba.scss */
+.shopping-container .cart .cart-all-items .cart-item .cart-item_count p {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+/* line 187, ../../../../Aplicaciones/Documents/PERSONAL/REACT UDEMY/VEGAN_SHOP/SASS/stylePrueba.scss */
+.shopping-container .cart .cart-actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 2vw;
+}
+
+/* line 192, ../../../../Aplicaciones/Documents/PERSONAL/REACT UDEMY/VEGAN_SHOP/SASS/stylePrueba.scss */
+.shopping-container .cart .cart-actions .cart-actions_item {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: .5vw;
+  background-color: #ffb672;
+  border-radius: 40px;
+  padding: 0.1vw 1.5vw;
+}
+
+/* line 201, ../../../../Aplicaciones/Documents/PERSONAL/REACT UDEMY/VEGAN_SHOP/SASS/stylePrueba.scss */
+.shopping-container .cart .cart-actions .cart-actions_item img {
+  width: auto;
+  height: 1vw;
+}
+
+/* line 205, ../../../../Aplicaciones/Documents/PERSONAL/REACT UDEMY/VEGAN_SHOP/SASS/stylePrueba.scss */
+.shopping-container .cart .cart-actions .cart-actions_item p {
+  font-family: "Poppins", sans-serif;
+  font-size: small;
+}
+
+/*# sourceMappingURL=stylePrueba.css.map */

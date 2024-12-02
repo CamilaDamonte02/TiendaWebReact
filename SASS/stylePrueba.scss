@@ -1,0 +1,211 @@
+$verde-pastel: #cbddce;
+$naranja-pastel:#ffd4a9;
+$naranja-pastel-oscuro:#ffb672;
+$rosa-pastel: #fdd3eb;
+$color-borde:#d8d6d6;
+$fuente-POPPINS: "Poppins", sans-serif;
+$fuente-LEAGUE_SPARTAN: "League Spartan", sans-serif;
+
+.shopping {
+    background-color: $verde-pastel;
+}
+
+.shopping-container{
+    display: grid;
+    gap: 2vw;
+    grid-template-columns: 3fr 1fr;
+    margin: 2vw;
+}
+
+.shopping-container .cart, .shopping-container .products{
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5vw 3vw;
+}
+
+.shopping-container .products{
+    .products-title{
+        text-align: center;
+        h1{
+            font-family: $fuente-LEAGUE_SPARTAN;
+            padding: 0;
+            margin: 0;
+            font-size: 4vw;
+        }
+        h3{
+            font-family: $fuente-POPPINS;
+            font-weight: 300;
+            font-size: small;
+            padding: 0;
+            margin: 0;
+            font-size: 1.5vw;        }
+    }
+
+    .products-category-all{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin: 2vw 0;
+        .products-category{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: $fuente-POPPINS;
+            .products-category_icon{
+                padding: 1vw;
+                background-color: $naranja-pastel;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                img{
+                    width: 3vw;
+                    height: auto;
+                    object-fit: cover;
+                    border-radius: 50%;
+                }                  
+            }
+        }
+    }
+   
+    .products-items-all{
+        display: grid;
+        grid-template-columns: repeat(1fr, 3);
+        margin-bottom: 2vw;
+        .product-item{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5vw;
+            border: 1px solid $color-borde;
+            border-radius: 25px;
+            padding: 0.5vw;
+            img{
+                border-radius: 25px;
+                width:15vw;
+                height: 10vw;
+                object-fit: cover;
+            }
+            img, p{
+                padding: 0;
+                margin: 0;
+            }
+            p{
+                font-family: $fuente-POPPINS;
+            }
+            .product-name{
+                text-transform: uppercase;
+                background-color: $verde-pastel;
+                width: 80%;
+                text-align: center;
+            }
+            .products-button-add{
+                background-color: $verde-pastel;
+                border: none;
+                padding: 0.5vw 1vw;
+                font-family: $fuente-POPPINS;
+                font-weight: 500;
+                border-radius: 25px;
+            }
+        }
+    }
+
+    .products-button{
+        background-color: $verde-pastel;
+        border: none;
+        padding: 0.5vw 1vw;
+        font-family: $fuente-POPPINS;
+        font-weight: 500;
+        border-radius: 25px;
+        width: 80%;
+        font-size: large;
+    }
+}
+
+.shopping-container .cart{
+    .cart-titles{
+        text-align: center;
+        h2{
+            font-family: $fuente-LEAGUE_SPARTAN;
+            padding: 0;
+            margin: 0;
+            font-size: 2vw;
+        }
+        h3{
+            font-family: $fuente-POPPINS;
+            font-weight: 300;
+            font-size: small;
+            padding: 0;
+            margin: 0;
+            font-size: 1vw;     
+        }  
+    }
+    .cart-all-items{
+        display: flex;
+        flex-direction: column;
+        gap: 1vw;
+        margin: 1vw;
+        .cart-item{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            gap: 1vw;
+            .cart-item_info{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: center;
+                gap: 1vw;
+                img{
+                    width: 4vw;
+                }
+                p{
+                    font-family: $fuente-POPPINS;
+                    font-size: small;
+                    text-align: left;
+                }
+            }
+            .cart-item_count{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 0.5vw;
+                p{
+                    margin: 0;
+                    padding: 0;
+                    font-family: $fuente-POPPINS;
+                }
+            }
+        }
+    }
+    .cart-actions{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        gap: 2vw;
+        .cart-actions_item{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: .5vw;
+            background-color: $naranja-pastel-oscuro;
+            border-radius: 40px;
+            padding: 0.1vw 1.5vw;
+            img{
+                width: auto;
+                height: 1vw;
+            }
+            p{
+                font-family: $fuente-POPPINS;
+                font-size: small;
+            }
+        }
+    }
+}
