@@ -8,6 +8,10 @@ $fuente-LEAGUE_SPARTAN: "League Spartan", sans-serif;
 
 .shopping {
     background-color: $verde-pastel;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 .shopping-container{
@@ -74,7 +78,8 @@ $fuente-LEAGUE_SPARTAN: "League Spartan", sans-serif;
    
     .products-items-all{
         display: grid;
-        grid-template-columns: repeat(1fr, 3);
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2vw;
         margin-bottom: 2vw;
         .product-item{
             display: flex;
