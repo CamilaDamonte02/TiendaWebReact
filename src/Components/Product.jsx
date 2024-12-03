@@ -1,11 +1,14 @@
-export default function Producto() {
+export default function Producto ({product}) {
+
+    const {imagen, nombre, marca, tamaño} = product
+
     return (
         <>
             <div className="product-item">
-                <img src="https://picsum.photos/200?random=5" alt=""/>
-                <p className="product-name">Tofu</p>
-                <p className="product-brand">Naturaleza</p>
-                <p className="product-size">400 gr</p>
+                <img src= {`/img/${imagen}`} alt=""/>
+                <p className="product-name"> {nombre} </p>
+                <p className="product-brand"> {marca} </p>
+                <p className="product-size">{tamaño}</p>
                 <button className="products-button-add">Agregar</button>
             </div>
         </>

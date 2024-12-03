@@ -1,6 +1,10 @@
+import { useState } from "react"
 import Product from "./Components/Product"
+import {db} from "./data/db"
 
 function App() {
+
+  const[data] = useState(db)
 
   return (
     <>   
@@ -19,10 +23,12 @@ function App() {
                     </div>
                 </div>
                 <div className="products-items-all">
-                    <Product/>
-                    <Product/>
-                    <Product/>
-                    <Product/>
+                  {data.map((product) => (
+                    <Product
+                      key={product.id}
+                      product = {product}
+                    />
+                  ))}
                 </div>
                 <button className="products-button">Ver más productos</button>
             </div>
