@@ -1,4 +1,4 @@
-export default function Producto ({product}) {
+export default function Producto ({product, addToCart}) {
 
     const {imagen, nombre, marca, tamaño} = product
 
@@ -9,7 +9,11 @@ export default function Producto ({product}) {
                 <p className="product-name"> {nombre} </p>
                 <p className="product-brand"> {marca} </p>
                 <p className="product-size">{tamaño}</p>
-                <button className="products-button-add">Agregar</button>
+                <button 
+                    className="products-button-add"
+                    type="button"
+                    onClick={ () => addToCart(product) }
+                >Agregar</button>
             </div>
         </>
     )

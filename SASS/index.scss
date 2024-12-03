@@ -54,6 +54,7 @@ $fuente-LEAGUE_SPARTAN: "League Spartan", sans-serif;
         align-items: center;
         justify-content: center;
         margin: 2vw 0;
+        gap: 2vw;
         .products-category{
             display: flex;
             flex-direction: column;
@@ -70,9 +71,11 @@ $fuente-LEAGUE_SPARTAN: "League Spartan", sans-serif;
                     width: 3vw;
                     height: auto;
                     object-fit: cover;
-                    border-radius: 50%;
                 }                  
             }
+        }
+        .products-category:hover{
+            cursor: pointer;
         }
     }
    
@@ -116,6 +119,9 @@ $fuente-LEAGUE_SPARTAN: "League Spartan", sans-serif;
                 font-weight: 500;
                 border-radius: 25px;
             }
+            .products-button-add:hover {
+                cursor: pointer;
+            }
         }
     }
 
@@ -157,13 +163,14 @@ $fuente-LEAGUE_SPARTAN: "League Spartan", sans-serif;
         .cart-item{
             display: flex;
             flex-direction: row;
-            justify-content: space-around;
+            justify-content: space-between;
+            padding: 0;
             align-items: center;
             gap: 1vw;
             .cart-item_info{
                 display: flex;
                 flex-direction: row;
-                justify-content: space-around;
+                justify-content: flex-end;
                 align-items: center;
                 gap: 1vw;
                 img{
@@ -185,6 +192,9 @@ $fuente-LEAGUE_SPARTAN: "League Spartan", sans-serif;
                     margin: 0;
                     padding: 0;
                     font-family: $fuente-POPPINS;
+                }
+                .buttonAdd, .buttonRemove:hover {
+                    cursor: pointer;
                 }
             }
         }
