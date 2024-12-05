@@ -1,6 +1,6 @@
 export default function Cart ({ cartItem, addToCart, removeToCart }) {
 
-    const {id, imagen, nombre, marca, tamaño, cantidad} = cartItem
+    const {imagen, nombre, marca, tamaño, cantidad} = cartItem
 
     return (
         <div className="cart-item">

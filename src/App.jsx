@@ -40,6 +40,12 @@ function App() {
         }
     }
 
+    const totalQuantity = cart.reduce((sum, item) => sum + item.cantidad, 0)
+    
+    const emptyCart = (cart) => {
+        setCart([])
+    }
+
     return (
         <>   
             <div className="shopping-container">
@@ -69,27 +75,49 @@ function App() {
                 <div className="cart">
                     <div className="cart-titles">   
                         <h2>Tu compra</h2>
-                        <h3>Tienes 4 artículos en tu carrito</h3>
+                        {cart.length !== 0 && <h3>Tienes { totalQuantity } artículos en tu carrito</h3>}
                     </div>
                     <div className="cart-all-items">
-                        {cart.map(cartItem => (
-                            <Cart
-                            key = {cartItem.id}
-                            cartItem = { cartItem }
-                            addToCart = { addToCart }
-                            removeToCart = { removeToCart }
-                            />
-                        ))}
+                        { cart.length === 0 ? (
+                            <div className="emptyCart">
+                                <p>El carrito está vacío</p>
+                                <img src="../public/img/emptyCart.png" alt="" />
+                            </div>
+                            
+                        ):(
+                            cart.map(cartItem => (
+                                <Cart
+                                key = {cartItem.id}
+                                cartItem = { cartItem }
+                                addToCart = { addToCart }
+                                removeToCart = { removeToCart }
+                                />
+                            ))
+                        )}
                     </div>
                     <div className="cart-actions">
-                        <div className="cart-actions_item">
-                            <img src="../public/img/iconoPrint.png" alt=""/> 
-                            <p>Imprimir</p>
-                        </div>
-                        <div className="cart-actions_item">
-                            <img src="../public/img/iconoDownload.png" alt=""/> 
-                            <p>Descargar</p>
-                        </div>
+                        { cart.length !== 0 && (
+                            <>
+                                <div className="cart-actions_row1">
+                                    <div className="cart-actions_item">
+                                        <img src="../public/img/iconoPrint.png" alt=""/> 
+                                        <p>Imprimir</p>
+                                    </div>
+                                    <div className="cart-actions_item">
+                                        <img src="../public/img/iconoDownload.png" alt=""/> 
+                                        <p>Descargar</p>
+                                    </div>
+                                </div>
+
+                                <div className="cart-actions_row2"> 
+                                    <div className="cart-actions_item" onClick={ () => emptyCart(cart)}>
+                                        <img src="../public/img/cleanCart.png" alt=""/> 
+                                        <p>Vaciar</p>
+                                    </div>
+                                </div>
+                            </>
+                        )}
+                        
                     </div>
                 </div>
             </div>

@@ -1,6 +1,5 @@
 $verde-pastel: #cbddce;
 $naranja-pastel:#ffd4a9;
-$naranja-pastel-oscuro:#ffb672;
 $rosa-pastel: #fdd3eb;
 $color-borde:#d8d6d6;
 $fuente-POPPINS: "Poppins", sans-serif;
@@ -198,19 +197,44 @@ $fuente-LEAGUE_SPARTAN: "League Spartan", sans-serif;
                 }
             }
         }
+        .emptyCart{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            
+            p{
+                font-family: $fuente-POPPINS;
+                font-size: medium;
+                font-weight: 700;
+                padding: 0;
+                margin: 0;
+            }
+            img{
+                width: 2vw;
+            }
+            
+        }
     }
     .cart-actions{
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: space-around;
         gap: 2vw;
+        .cart-actions_row1 {
+            display: flex;
+            flex-direction: row;
+            gap: 1vw;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+        }
         .cart-actions_item{
             display: flex;
             flex-direction: row;
             justify-content: center;
             align-items: center;
             gap: .5vw;
-            background-color: $naranja-pastel-oscuro;
+            background-color: $naranja-pastel;
             border-radius: 40px;
             padding: 0.1vw 1.5vw;
             img{
@@ -221,6 +245,9 @@ $fuente-LEAGUE_SPARTAN: "League Spartan", sans-serif;
                 font-family: $fuente-POPPINS;
                 font-size: small;
             }
+        }
+        .cart-actions_item:hover{
+            cursor: pointer;
         }
     }
 }
