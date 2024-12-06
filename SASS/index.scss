@@ -281,7 +281,8 @@ $fuente-LEAGUE_SPARTAN: "League Spartan", sans-serif;
             }
             h3{
                 font-weight: 300;
-                font-size: 1.5vw;        }
+                font-size: 1.5vw;        
+            }
         }
     
         .products-category-all{
@@ -342,6 +343,10 @@ $fuente-LEAGUE_SPARTAN: "League Spartan", sans-serif;
         .cart-actions_item{
             p{
                 margin: .5vw;
+            }
+            img{
+                width: 2vw;
+                height: auto; 
             }
         }
         .cart-item_info img{
