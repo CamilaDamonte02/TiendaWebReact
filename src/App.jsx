@@ -86,24 +86,7 @@ function App() {
                         <h2>Tu compra</h2>
                         {cart.length !== 0 && <h3>Tienes { totalQuantity } artículos en tu carrito</h3>}
                     </div>
-                    <div className="cart-all-items">
-                        { cart.length === 0 ? (
-                            <div className="emptyCart">
-                                <p>El carrito está vacío</p>
-                                <img src="/img/emptyCart.png" alt="" />
-                            </div>
-                            
-                        ):(
-                            cart.map(cartItem => (
-                                <Cart
-                                key = {cartItem.id}
-                                cartItem = { cartItem }
-                                addToCart = { addToCart }
-                                removeToCart = { removeToCart }
-                                />
-                            ))
-                        )}
-                    </div>
+
                     <div className="cart-actions">
                         { cart.length !== 0 && (
                             <>
@@ -128,6 +111,26 @@ function App() {
                         )}
                         
                     </div>
+                    
+                    <div className="cart-all-items">
+                        { cart.length === 0 ? (
+                            <div className="emptyCart">
+                                <p>El carrito está vacío</p>
+                                <img src="/img/emptyCart.png" alt="" />
+                            </div>
+                            
+                        ):(
+                            cart.map(cartItem => (
+                                <Cart
+                                key = {cartItem.id}
+                                cartItem = { cartItem }
+                                addToCart = { addToCart }
+                                removeToCart = { removeToCart }
+                                />
+                            ))
+                        )}
+                    </div>
+                    
                 </div>
             </div>
         </>
