@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Product from "./Components/Product"
 import Cart from "./Components/Cart"
 import Category from "./Components/Category"
@@ -6,9 +6,18 @@ import {db, categories } from "./data/db"
 
 function App() {
 
-    const[data, setData] = useState(db)
-    const [categoryList, setCategoryList] = useState(categories);
-    const [cart, setCart] = useState([])
+    const initialCart = () => {
+        const LocalStorageCart = localStorage.getItem('cart')
+        return LocalStorageCart ? JSON.parse(LocalStorageCart) : []
+    }
+
+    const[data] = useState(db)
+    const [categoryList] = useState(categories);
+    const [cart, setCart] = useState(initialCart)
+
+    useEffect(() => {
+        localStorage.setItem('cart', JSON.stringify(cart))
+    },  [cart])
 
     const addToCart = (item) => {
         //Verifica si existe en el carrito antes de agregarlo
@@ -42,10 +51,10 @@ function App() {
 
     const totalQuantity = cart.reduce((sum, item) => sum + item.cantidad, 0)
     
-    const emptyCart = (cart) => {
+    const emptyCart = () => {
         setCart([])
     }
-
+ 
     return (
         <>   
             <div className="shopping-container">
@@ -81,7 +90,7 @@ function App() {
                         { cart.length === 0 ? (
                             <div className="emptyCart">
                                 <p>El carrito está vacío</p>
-                                <img src="../public/img/emptyCart.png" alt="" />
+                                <img src="/img/emptyCart.png" alt="" />
                             </div>
                             
                         ):(
@@ -100,18 +109,18 @@ function App() {
                             <>
                                 <div className="cart-actions_row1">
                                     <div className="cart-actions_item">
-                                        <img src="../public/img/iconoPrint.png" alt=""/> 
+                                        <img src="/img/iconoPrint.png" alt=""/> 
                                         <p>Imprimir</p>
                                     </div>
                                     <div className="cart-actions_item">
-                                        <img src="../public/img/iconoDownload.png" alt=""/> 
+                                        <img src="/img/iconoDownload.png" alt=""/> 
                                         <p>Descargar</p>
                                     </div>
                                 </div>
 
                                 <div className="cart-actions_row2"> 
                                     <div className="cart-actions_item" onClick={ () => emptyCart(cart)}>
-                                        <img src="../public/img/cleanCart.png" alt=""/> 
+                                        <img src="/img/cleanCart.png" alt=""/> 
                                         <p>Vaciar</p>
                                     </div>
                                 </div>
